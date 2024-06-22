@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Multi-Step Poll Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a multi-step poll application built using React and Redux. The application allows users to navigate through various questions using a carousel, answer each question, and submit their responses.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+Multi-step form with a carousel for navigation.\
+Redux for state management.\
+API integration for submitting data.\
+Tests using Jest and React Testing Library.\
+
+## Technologies
+
+React.\
+Redux.\
+TypeScript.\
+Jest.\
+React Testing Library.\
+Ant Design for UI components.\
+
+# Getting Started
+
+## Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+## Installation
+
+Clone the repository.\
+
+### `git clone https://github.com/mallikarjunan1351/multi-step-poll-app.git`
+### `cd multi-step-poll-app`
+
+Install the dependencies.\
+
+### `npm install`
+
+## Running the Application
+
+To start the development server, run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This will start the application on http://localhost:3000.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Running Tests
+
+To run the tests, use:
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## If you encounter dependency resolution issues, try running:
 
-### `npm run build`
+### `npm install --legacy-peer-deps`
+### `npm install --force`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+src/
+    api/: Contains the mock API functions
+    components/: Contains the React components
+    redux/: Contains Redux actions, reducers, and store configuration
+    styles/: Contains the CSS files
+    tests/: Contains the test files
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Components
+## PollForm
+The main component that renders the poll form. It includes the carousel for navigation and a summary of answers.
 
-### `npm run eject`
+## Carousel
+A component that displays the steps of the poll and allows navigation between them using up and down arrows.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Step
+A component that renders the options for each step/question.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Summary
+A component that displays a summary of all answers before submission.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## API
+Mock API.\
+The mock API simulates a server response. The submitData function sends a POST request to a placeholder API.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Testing
+Tests are written using Jest and React Testing Library. They cover the main functionalities of the components and API calls.
